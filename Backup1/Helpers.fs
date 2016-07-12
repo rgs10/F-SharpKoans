@@ -14,7 +14,7 @@ type FILL_IN_THE_EXCEPTION() =
 
 let AssertWithMessage x message = Assert.IsTrue(x, message)
 
-let AssertEquality (x:'a) (y:'b) =  Assert.AreEqual(x,y)   
+let AssertEquality (x:'a) (y:'b) = Assert.AreEqual(x,y)   
 
 let AssertInequality (x:'a) (y:'b) = Assert.AreNotEqual(x,y)
 

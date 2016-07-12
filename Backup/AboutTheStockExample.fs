@@ -1,6 +1,5 @@
 ﻿namespace FSharpKoans
 open FSharpKoans.Core
-open System.Globalization
 
 //---------------------------------------------------------------
 // Apply Your Knowledge!
@@ -59,59 +58,8 @@ module ``about the stock example`` =
     // tests for yourself along the way. You can also try 
     // using the F# Interactive window to check your progress.
 
-    //rgs test Koan
     [<Koan>]
-    let RGSTestKoan() =
-        let splitCommas (x:string) =
-                x.Split([|','|])
-    
-        let listArrayStringData =
-                        List.map splitCommas stockData
-
-        // Chop off the heading values
-        let listArrayStringDataTail = 
-                        List.tail listArrayStringData
-
+    let YouGotTheAnswerCorrect() =
+        let result =  __
         
-        let getDateElements (x) = Array.get x 0
-        let getOpenElements (x) = System.Double.Parse( Array.get x 1 )
-        let getCloseElements (x) = System.Double.Parse( Array.get x 4 )
-                     
-        let listArrayDates =
-                     List.map getDateElements listArrayStringDataTail
-
-        let listHighElements =
-                    List.map getOpenElements listArrayStringDataTail
-
-        let listLowElements =
-                    List.map getCloseElements listArrayStringDataTail
-                     
-        let variation (x:float, y:float) =
-                    abs(x - y)
-        
-        let variationResults = 
-                    List.zip listHighElements listLowElements
-
-        let differenceResults =
-                    List.map variation variationResults
-
-        let maxEntry =
-                    List.max differenceResults
-
-        
-        let listIndex =
-                    List.findIndex (fun elem -> elem = maxEntry) differenceResults
-
-        let result =
-                    listArrayDates.Item listIndex
-                         
-        AssertEquality [1] [1]
-     
-//     AssertEquality x "test"
-    
-
-//    [<Koan>]
-//    let YouGotTheAnswerCorrect() =
-//        let result =  __
-//        
         AssertEquality "2012-03-13" result

@@ -19,7 +19,7 @@ module ``about unit`` =
             ()
 
         let x = sendData "data"
-        AssertEquality x null //Don't overthink this
+        AssertEquality x __ //Don't overthink this
 
     [<Koan>]
     let ParameterlessFunctionsTakeUnitAsTheirArgument() =
@@ -27,4 +27,4 @@ module ``about unit`` =
             "hello"
 
         let result = sayHello()
-        AssertEquality result "hello"
+        AssertEquality result __
